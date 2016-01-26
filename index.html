@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.6.0/fullcalendar.min.css">
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.6.0/fullcalendar.print.css">
+		<link rel="stylesheet" href="/css/main.css">
+    </head>
+    <body>
+		<div id="authorize-div" style="display: none">
+		    <span>Authorize access to Google Calendar API</span>
+		    <!--Button for the user to click to initiate auth sequence -->
+		    <button id="authorize-button" onclick="handleAuthClick(event)">
+		        Authorize
+		    </button>
+		</div>
+		<div class="container" id="main">
+		<div id="calendar" style="width:100%;"></div>
+			<div class="row">
+				<div class="col-sm-6 card">
+					<div class="panel-heading">
+						<h3 class="panel-title">Thermostat <span class="state"></span></h3>
+					</div>
+					<div class="thermostat">
+						<span id="havc_mode" class="thermostat_Settings"></span>
+						<span id="target_temp" class="thermostat_Settings"></span>
+						<div class="btn-group change_temp" role="group">
+						  <button id="increase" type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+						  <button id="decrease" type="button" class="btn btn-default"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button>
+						</div>
+					</div>
+					<div class="environment_Settings">
+						<p id="inside_temp">
+							<span>Current:</span>
+						</p>
+						<p id="inside_humidity">
+							<span>Humidity:</span>
+						</p>
+					</div>
+				</div>
+				<div class="col-sm-6 card dropCam">
+					
+				</div>
+			</div>
+		</div>
+		
+		<!-- JS libraries -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="/lib/js-cookie.min.js"></script>
+        <script src="/lib/firebase.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.1/moment.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.6.0/fullcalendar.min.js"></script>
+        <script src="/lib/shortcut.min.js"></script>
+        <!-- /JS libraries -->
+
+		<script src="/js/calendar.js"></script>	
+		<script src="/js/nest.js"></script>
+
+		<script src="//apis.google.com/js/client.js?onload=checkAuth"></script>
+        <script src="/js/main.js" defer></script>
+    </body>
+</html>

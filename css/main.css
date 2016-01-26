@@ -1,0 +1,121 @@
+#calendar{
+  height: 500px;
+}
+.fc-view-container{
+  height: 500px;
+}
+.fc-event{
+  font-size: 1.15em;
+}
+.fc-row .fc-content-skeleton td.fc-today, 
+.fc-row .fc-helper-skeleton td.fc-today{
+  color: red;
+}
+
+
+body{
+  font-size: 1em;
+  background: #f5f5f5;
+  font-family: 'Aria';
+}
+
+.card{
+  background: #fff;
+  border-color:#ddd;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.thermostat{
+  border: 10px solid #7f8c8d;
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+  margin: 10px auto 10px auto;
+  position: relative;
+}
+
+.cooling{
+  background: #3498db none repeat scroll 0 0;
+}
+
+.heating{
+  background: #e67e22 none repeat scroll 0 0;
+}
+
+.off{
+  background: #bdc3c7 none repeat scroll 0 0;
+}
+
+#main{
+  margin-top: 1em;
+}
+
+.panel-heading{
+  background-color: #f5f5f5;
+  color: #333;
+  padding-left: 0;
+  padding-right: 0;
+  font-weight: 800;
+  border: 1px solid #ddd;
+}
+
+h3{
+  padding-left: 15px;
+  font-weight: 800;
+  font-size: 1.25em;
+}
+
+.thermostat_Settings{
+  color: #fff;
+  display: block;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+span#havc_mode{
+  font-size: 2em;
+  top: 25%;
+}
+
+span#target_temp{
+  font-size: 10em;
+  top: 15%;
+  width: 100%;
+}
+
+.environment_Settings{
+  padding-left: 15px;
+  font-size: 1.5em;
+  background-color: #f5f5f5;
+  color: #333;
+  font-weight: 800;
+  border: 1px solid #ddd;
+}
+
+.environment_Settings p{
+  margin: 10px 0 0 10px;
+}
+
+
+.change_temp{
+  display: block;
+  margin: auto;
+  padding: 30px 0 0;
+  width: 81px;
+}
+
+iframe{
+  display: block;
+  margin: auto;
+  position: relative;
+  border-radius: 5px;
+}
+
+
+body .fc {
+    font-size: 1.25em;
+}
